@@ -1,4 +1,4 @@
-package com.nextyu.book.study.source.chapter7_customizing_concurrency_classes._7_Implementing_the_ThreadFactory_interface_to_generate_custom_threads_for_the_fork_join_framwork;
+package com.nextyu.book.study.source.chapter7_customizing_concurrency_classes._7;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
