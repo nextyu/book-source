@@ -28,7 +28,7 @@ public class ArrayInsertion {
         System.out.println();
     }
 
-    public void selectSort() {
+    public void insertionSort() {
         int out, in;
         for (out = 1; out < nElems; out++) {
             long temp = a[out]; // 被标记的成员
@@ -65,7 +65,7 @@ public class ArrayInsertion {
 
         array.display();
 
-        array.selectSort();
+        array.insertionSort();
 
         array.display();
 
