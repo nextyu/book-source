@@ -15,6 +15,7 @@ public class HighArray {
     }
 
     public boolean find(long searchKey) {
+        // 线性查找
         int j;
         for (j = 0; j < nElems; j++) {
             if (searchKey == a[j]) {
@@ -30,7 +31,7 @@ public class HighArray {
     }
 
     public boolean delete(long value) {
-        // 删除元素index
+        // 删除元素的index
         int j;
         for (j = 0; j < nElems; j++) {
             if (value == a[j]) {
