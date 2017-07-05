@@ -29,26 +29,22 @@ public class ArrayInsertion {
     }
 
     public void insertionSort() {
+        // out变量从1开始，向右移动
+        // in变量从out开始，向左移动
         int out, in;
         for (out = 1; out < nElems; out++) {
-            long temp = a[out]; // 被标记的成员
+            long temp = a[out]; // 缓存 被标记的成员
             in = out;
-            while (in > 0 && a[in - 1] >= temp) {
+            while (in > 0 && a[in - 1] > temp) {
+                // 被标记成员的左边的元素，如果比被标记的成员大的或者等于的，都往右移一位
                 a[in] = a[in - 1];
                 in--; // 左移一位
             }
-            a[in] = temp;
+            a[in] = temp; // 插入 被标记的成员
+            display();
         }
 
     }
-
-    private void swap(int left, int right) {
-        System.out.println("swap " + a[left] + " " + a[right]);
-        long temp = a[left];
-        a[left] = a[right];
-        a[right] = temp;
-    }
-
 
     public static void main(String[] args) {
         int max = 100;
@@ -63,11 +59,11 @@ public class ArrayInsertion {
         array.insert(88);
         array.insert(77);
 
-        array.display();
+        //array.display();
 
         array.insertionSort();
 
-        array.display();
+        //array.display();
 
     }
 
