@@ -1,16 +1,16 @@
 package com.nextyu.chapter3;
 
 /**
- * 冒泡排序
+ * 选择排序
  * created on 2017-07-05 17:25
  *
  * @author nextyu
  */
-public class ArrayBubble {
+public class ArraySelect {
     private long[] a;
     private int nElems; // number of data items
 
-    public ArrayBubble(int max) {
+    public ArraySelect(int max) {
         a = new long[max];
         nElems = 0;
     }
@@ -28,16 +28,19 @@ public class ArrayBubble {
         System.out.println();
     }
 
-    public void bubbleSort() {
-        int out, in;
-
-        for (out = nElems - 1; out > 1; out--) {
-            for (in = 0; in < out; in++) {
-                if (a[in] > a[in + 1]) {
-                    swap(in, in + 1);
+    public void selectSort() {
+        int out, in, min;
+        for (out = 0; out < nElems - 1; out++) { // 外层循环
+            min = out;
+            for (in = out + 1; in < nElems; in++) { // 内层循环
+                if (a[in] < a[min]) {
+                    min = in;
                 }
             }
-            display();
+            if (out != min) {
+                swap(out, min);
+                display();
+            }
         }
     }
 
@@ -51,7 +54,7 @@ public class ArrayBubble {
 
     public static void main(String[] args) {
         int max = 100;
-        ArrayBubble array = new ArrayBubble(max);
+        ArraySelect array = new ArraySelect(max);
         array.insert(99);
         array.insert(11);
         array.insert(22);
@@ -64,9 +67,9 @@ public class ArrayBubble {
 
         //array.display();
 
-        array.bubbleSort();
+        array.selectSort();
 
-        // array.display();
+        //array.display();
 
     }
 
