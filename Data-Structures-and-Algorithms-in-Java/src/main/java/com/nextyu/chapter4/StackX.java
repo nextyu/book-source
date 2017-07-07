@@ -1,7 +1,7 @@
 package com.nextyu.chapter4;
 
 /**
- * 栈-后进先出-LIFO
+ * 栈-先进后出-LIFO
  *
  * 单词逆序
  *

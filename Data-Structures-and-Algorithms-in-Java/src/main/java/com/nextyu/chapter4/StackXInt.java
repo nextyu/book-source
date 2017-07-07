@@ -7,26 +7,26 @@ package com.nextyu.chapter4;
  *
  * @author nextyu
  */
-public class StackXChar {
+public class StackXInt {
     private int maxSize; // size of stack array
-    private char[] stackArray;
+    private int[] stackArray;
     private int top; // top of stack
 
-    public StackXChar(int s) {
+    public StackXInt(int s) {
         this.maxSize = s;
-        stackArray = new char[s];
+        stackArray = new int[s];
         top = -1; // not item yet
     }
 
-    public void push(char l) { // push item on top of stack
+    public void push(int l) { // push item on top of stack
         stackArray[++top] = l; // increment top, insert item
     }
 
-    public char pop() { // take item from top stack
+    public int pop() { // take item from top stack
         return stackArray[top--]; // access item, decrement top
     }
 
-    public char peek() { // peek at top of stack
+    public int peek() { // peek at top of stack
         return stackArray[top];
     }
 
@@ -35,7 +35,7 @@ public class StackXChar {
     }
 
     // return item at index n
-    public char peekN(int n) {
+    public int peekN(int n) {
         return stackArray[n];
     }
 
