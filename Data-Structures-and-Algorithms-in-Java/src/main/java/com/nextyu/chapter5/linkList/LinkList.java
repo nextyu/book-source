@@ -1,6 +1,7 @@
-package com.nextyu.chapter5;
+package com.nextyu.chapter5.linkList;
 
 /**
+ * 单链表
  * created on 2017-07-07 14:48
  *
  * @author nextyu
@@ -91,16 +92,31 @@ public class LinkList {
 
         linkList.displayList();
 
-        while (!linkList.isEmpty()) {
+       /* while (!linkList.isEmpty()) {
             Link link = linkList.deleteFirst();
             System.out.print("Deleted ");
             link.displayLink();
             System.out.println("");
+        }*/
+
+        Link find = linkList.find(44);
+        if (find != null) {
+            System.out.println("Found link with key " + find.iData);
+        } else {
+            System.out.println("Can't find link");
+        }
+
+        Link delete = linkList.delete(55);
+        if (delete != null) {
+            System.out.println("Deleted link with key " + delete.iData);
+        } else {
+            System.out.println("Can't delete link");
         }
 
 
         linkList.displayList();
 
     }
+
 
 }

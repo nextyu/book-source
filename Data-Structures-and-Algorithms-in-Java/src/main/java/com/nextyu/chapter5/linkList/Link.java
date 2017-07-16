@@ -1,4 +1,4 @@
-package com.nextyu.chapter5;
+package com.nextyu.chapter5.linkList;
 
 /**
  * 单链表
